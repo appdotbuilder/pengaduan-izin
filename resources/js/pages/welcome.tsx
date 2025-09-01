@@ -1,5 +1,6 @@
 import { type SharedData } from '@/types';
 import { Head, Link, usePage } from '@inertiajs/react';
+import { ApiExamples } from '@/components/api-examples';
 
 export default function Welcome() {
     const { auth } = usePage<SharedData>().props;
@@ -41,12 +42,62 @@ export default function Welcome() {
                 <div className="flex w-full items-center justify-center opacity-100 transition-opacity duration-750 lg:grow starting:opacity-0">
                     <main className="flex w-full max-w-[335px] flex-col-reverse lg:max-w-4xl lg:flex-row">
                         <div className="flex-1 rounded-br-lg rounded-bl-lg bg-white p-6 pb-12 text-center shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] lg:rounded-tl-lg lg:rounded-br-none lg:p-20 dark:bg-[#161615] dark:text-[#EDEDEC] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d]">
-                            <h1 className="mb-4 text-2xl font-bold">Your app is under construction.</h1>
+                            <div className="mb-6 text-6xl">🔐</div>
+                            <h1 className="mb-4 text-3xl font-bold">Laravel Sanctum API Authentication</h1>
                             <p className="mb-8 text-lg text-[#706f6c] dark:text-[#A1A09A]">
-                                It's being built right now!
+                                Secure API authentication system with token-based access control
                             </p>
+                            
+                            <div className="mb-8 grid gap-4 text-left lg:grid-cols-2">
+                                <div className="rounded-lg border border-[#19140035] p-4 dark:border-[#3E3E3A]">
+                                    <div className="mb-2 text-2xl">🚀</div>
+                                    <h3 className="mb-2 font-semibold">API Endpoints</h3>
+                                    <ul className="text-sm text-[#706f6c] dark:text-[#A1A09A]">
+                                        <li>• POST /api/register</li>
+                                        <li>• POST /api/login</li>
+                                        <li>• POST /api/logout</li>
+                                        <li>• GET /api/user</li>
+                                    </ul>
+                                </div>
+                                
+                                <div className="rounded-lg border border-[#19140035] p-4 dark:border-[#3E3E3A]">
+                                    <div className="mb-2 text-2xl">🛡️</div>
+                                    <h3 className="mb-2 font-semibold">Security Features</h3>
+                                    <ul className="text-sm text-[#706f6c] dark:text-[#A1A09A]">
+                                        <li>• Token-based authentication</li>
+                                        <li>• Email validation</li>
+                                        <li>• Password encryption</li>
+                                        <li>• Form request validation</li>
+                                    </ul>
+                                </div>
+                                
+                                <div className="rounded-lg border border-[#19140035] p-4 dark:border-[#3E3E3A]">
+                                    <div className="mb-2 text-2xl">📝</div>
+                                    <h3 className="mb-2 font-semibold">Registration</h3>
+                                    <ul className="text-sm text-[#706f6c] dark:text-[#A1A09A]">
+                                        <li>• Name, email & password required</li>
+                                        <li>• Password confirmation</li>
+                                        <li>• Unique email validation</li>
+                                        <li>• Returns API token</li>
+                                    </ul>
+                                </div>
+                                
+                                <div className="rounded-lg border border-[#19140035] p-4 dark:border-[#3E3E3A]">
+                                    <div className="mb-2 text-2xl">🔑</div>
+                                    <h3 className="mb-2 font-semibold">Login System</h3>
+                                    <ul className="text-sm text-[#706f6c] dark:text-[#A1A09A]">
+                                        <li>• Email & password validation</li>
+                                        <li>• Credential verification</li>
+                                        <li>• Secure token generation</li>
+                                        <li>• User profile access</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <ApiExamples />
+                            
                             <footer className="mt-12 text-sm text-[#706f6c] dark:text-[#A1A09A]">
-                                Built with ❤️ by{" "}
+                                Built with Laravel Sanctum & ❤️ by{" "}
                                 <a 
                                     href="https://app.build" 
                                     target="_blank" 
